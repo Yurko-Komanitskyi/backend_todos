@@ -4,9 +4,13 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "db:migrate": "sequelize db:migrate",
-    "db:seed": "sequelize db:seed"
+    "db:seed": "sequelize db:seed",
+    "start:pm2": "pm2 start src/index.js --name backend_todos",
+    "stop:pm2": "pm2 stop backend_todos",
+    "logs:pm2": "pm2 logs backend_todos"
   },
   "repository": {
     "type": "git",
