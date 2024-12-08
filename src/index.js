@@ -11,8 +11,6 @@ const PORT = process.env.PORT || 3005;
 
 const app = express();
 
-console.log(process.env.CLIENT_HOST);
-
 app.use(
   Cors({
     origin: process.env.CLIENT_HOST,
@@ -27,5 +25,5 @@ app.use("/", authRouter);
 app.use(errorMiddleware);
 
 app.listen(PORT, () => {
-  console.log("server is running", PORT);
+  console.log("server is running");
 });
